@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function(event) {
-	
+
 	function loadJSON(callback) {
 
 	    var xobj = new XMLHttpRequest();
@@ -29,4 +29,3 @@ window.addEventListener("DOMContentLoaded", function(event) {
 		document.querySelector('#view').appendChild(clonedTemplate);
 	});
 });
-
