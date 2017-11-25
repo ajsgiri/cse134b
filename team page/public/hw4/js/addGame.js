@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
 
 			    //sets local browser storage for now, do a post on a rest endpoint when we get there
 			    localStorage.setItem('schedule', JSON.stringify(schedule));
-			    window.location.href = "./schedule.html";		
+			    window.location.href = "./schedule.html";
 			}
 		} else{
 			var container = document.querySelector('#addGame_container')

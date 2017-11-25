@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", function(event) {
 
+<<<<<<< HEAD
 	var games = localStorage.getItem('schedule');
 	var userType = localStorage.getItem('userType');
 	var scheduleContainer = document.querySelector('#view');
@@ -168,6 +169,8 @@ window.addEventListener("DOMContentLoaded", function(event) {
 		scheduleContainer.classList.remove('hidden');
 	}
 
+=======
+>>>>>>> 37521947bc2eb74b7c66fe8faf994c98ee85bcb4
 	function loadJSON(callback) {
 
 	    var xobj = new XMLHttpRequest();
@@ -262,6 +265,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
 						</div>
 					</main>`;
 
+<<<<<<< HEAD
 		//insert html into the game page and display it
 		gamePage.innerHTML = markup;
 		gamePage.classList.remove('hidden');
@@ -372,4 +376,11 @@ window.addEventListener("DOMContentLoaded", function(event) {
 			});
 		}
 
+=======
+		let markup = schedule.map(game =>`<a href="./liveGame.html" class="large_button"><p>${game.date} ${game.team1} vs. ${game.team2}</p></a>`).join('');
+		t.content.querySelector('#schedule-list').innerHTML = markup;
+		let clonedTemplate = document.importNode(t.content, true);
+		document.querySelector('#view').appendChild(clonedTemplate);
+	});
+>>>>>>> 37521947bc2eb74b7c66fe8faf994c98ee85bcb4
 });
