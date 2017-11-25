@@ -8,24 +8,23 @@
 </head>
 <body>
 	<header class="settings-bar">
-		<a href="./addPlayer.html"><img src="../images/plus.png" alt="settings"></a>
+		<a href="./addPlayer.html" id="addPlayer-button" class="hidden"><img src="../images/plus.png" alt="settings"></a>
 	</header>
-	<main class="container text_align_center" id="view">
+	<div class="container text_align_center" id="roster">
 		<h1 class="no_margin"> Players </h1>
-		<select id="player-filter">
-			<option value="goals"> Sort By: Goals </option>
-		</select>
-		
-	</main>
+		<div id="view"></div>
+	</div>
+	<div id="playerProfile-view" class="hidden"></div>
+	<div id="update-view" class="hidden"></div>
 
 	<template id="roster-view">
 		<div id="player-list"></div>
 	</template>
 
-	<footer class="bottom-logo">
+<!-- 	<footer class="bottom-logo">
 		<img src="../images/soccerball.jpg" class="inline_block" alt="soccerball">
 		<p class="inline_block">Team Watch</p>
-	</footer>
+	</footer> -->
 
 	<script src="../js/roster.js"></script>
 </body>

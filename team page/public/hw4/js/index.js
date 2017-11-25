@@ -5,18 +5,33 @@ window.addEventListener("DOMContentLoaded", function(event) {
 	const logInInput = document.getElementById('logIn-input');
 	const passwordInput = document.getElementById('password-input')
 
-	logInButton.addEventListener('click', authenticateUser);
+	logInButton.addEventListener('click', makeRequest);
 	newUserButton.addEventListener('click', createNewUser);
 
-
 	/*fake authenticate users. 
-	Username: cse134b 
-	Password: cse134b
+	Username: coach
+	Password: coach
+
+	Username: player
+	Password: player
+
+	Username: fan
+	Password: fan
 	*/
-	function authenticateUser(e){
-		e.preventDefault();
-		if(logInInput.value === "cse134b" && passwordInput.value ==="cse134b"){
-			console.log('yay, it logged in');
+	function authenticateUser(users){
+		var inputtedUsername = logInInput.value;
+		var inputtedPassword = passwordInput.value;
+
+		var user = users[inputtedUsername];
+
+		if(!user){
+			console.log('this user doesnt exist');
+			logInInput.style.border = "2px solid red";
+			return;
+		} else if(user.password === inputtedPassword){
+			console.log('log in successful');
+			localStorage.setItem('currentTeam', user.team);
+			localStorage.setItem('userType', user.userType);
 			window.location.href = './html/homepage.html';
 		} else{
 			logInInput.style.border = "2px solid red";
@@ -28,5 +43,30 @@ window.addEventListener("DOMContentLoaded", function(event) {
 	function createNewUser(){
 		window.location.href = "./html/createAcc.html";
 	};
+
+	// get the list of users 
+	function makeRequest(e,username, itemToCompare){
+		e.preventDefault();
+		loadJSON(function(response) {
+		    jsonresponse = JSON.parse(response);
+		    var users = jsonresponse.users;
+		    authenticateUser(users);
+		});
+	}	
+
+	function loadJSON(callback) {
+
+	    var xobj = new XMLHttpRequest();
+	    xobj.overrideMimeType("application/json");
+
+	    // when using network, change the json file to a REST endpoint
+	    xobj.open('GET', './json/teams.json', true);
+	    xobj.onreadystatechange = function() {
+	        if (xobj.readyState == 4 && xobj.status == "200") {
+	            callback(xobj.responseText);
+	        }
+	    }
+	    xobj.send(null);
+	}
 
 });

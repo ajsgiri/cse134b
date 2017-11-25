@@ -1,30 +1,71 @@
 {
 	"team": [
 		{
-			"name": "Jeff Evans #1",
+			"name": "Jeff Evans",
+			"number": "1",
 			"position": "Forward",
 			"goals": 10,
+			"fouls": 0,
+			"yellowCards": 0,
+			"redCards": 0,
+			"shotsOnGoal": 21,
+			"cornerKicks": 17,
+			"goalKicks": 17,
 			"img": "../images/soccerplayer.png"
 		},	
 
 		{
-			"name": "Ajay Giri #5",
+			"name": "Ajay Giri",
+			"number": "2",
 			"position": "Goalie",
 			"goals": 0,
-			"img": "../images/soccerplayer.png"
+			"fouls": 2,
+			"yellowCards": 0,
+			"redCards": 0,
+			"shotsOnGoal": 0,
+			"cornerKicks": 0,
+			"goalKicks": 25,
+			"img": "../images/ajaygiri.jpg"
 		},
 
 		{
-			"name": "Eric Tseng #2",
+			"name": "Eric Tseng",
+			"number": "3",
 			"position": "Center",
 			"goals": 1,
-			"img": "../images/soccerplayer.png"
+			"fouls": 10,
+			"yellowCards": 5,
+			"redCards": 2,
+			"shotsOnGoal": 3,
+			"cornerKicks": 1,
+			"goalKicks": 0,
+			"img": "../images/erictseng.jpg"
 		},
 
 		{
-			"name": "Hans Gamboa #3",
+			"name": "Hans Gamboa",
+			"number": "4",
 			"position": "Defender",
+			"goals": 1,
+			"fouls": 10,
+			"yellowCards": 5,
+			"redCards": 3,
+			"shotsOnGoal": 1,
+			"cornerKicks": 0,
+			"goalKicks": 0,
+			"img": "../images/hansgamboa.jpg"
+		},
+		{
+			"name": "Steve Harrington",
+			"number": "5",
+			"position": "Center Mid",
 			"goals": 2,
+			"fouls": 0,
+			"yellowCards": 0,
+			"redCards": 0,
+			"shotsOnGoal": 21,
+			"cornerKicks": 17,
+			"goalKicks": 17,
 			"img": "../images/soccerplayer.png"
 		}
 	]
